@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: ivory;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ControllerLogin">
+   <children>
+      <Label fx:id="etiquetaTitulo" layoutX="312.0" layoutY="57.0" text="Login de usuario">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imagenUsuario" fitHeight="150.0" fitWidth="200.0" layoutX="325.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/icone-utilisateur-gris.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="etiquetaEmail" layoutX="226.0" layoutY="285.0" text="Email:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="etiquetaPassword" layoutX="184.0" layoutY="340.0" text="Contraseña: ">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="campoEmail" layoutX="326.0" layoutY="288.0" />
+      <PasswordField fx:id="campoPassword" layoutX="326.0" layoutY="342.0" />
+      <Button fx:id="btnLogin" layoutX="368.0" layoutY="471.0" mnemonicParsing="false" onMouseClicked="#handlebtnLogin" text="Enviar">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRegistro" layoutX="639.0" layoutY="471.0" mnemonicParsing="false" onMouseClicked="#handlebtnRegistro" text="Registrarse">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

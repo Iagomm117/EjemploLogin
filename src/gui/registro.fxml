@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: ivory;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ControllerRegistro">
+   <children>
+      <Label fx:id="etiquetaTitulo" layoutX="292.0" layoutY="43.0" text="Registro de usuarios">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="etiquetaNombre" layoutX="178.0" layoutY="196.0" text="Nombre:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="etiquetaEmail" layoutX="204.0" layoutY="278.0" text="Email:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="etiquetaApellido" layoutX="178.0" layoutY="235.0" text="Apellido:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="etiquetaPassword" layoutX="152.0" layoutY="319.0" text="Contraseña:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="campoNombre" layoutX="292.0" layoutY="199.0" prefHeight="25.0" prefWidth="235.0" />
+      <TextField fx:id="campoApellido" layoutX="292.0" layoutY="238.0" prefHeight="25.0" prefWidth="235.0" />
+      <TextField fx:id="campoEmail" layoutX="292.0" layoutY="281.0" prefHeight="25.0" prefWidth="235.0" />
+      <PasswordField fx:id="campoPassword" layoutX="292.0" layoutY="319.0" prefHeight="25.0" prefWidth="235.0" />
+      <CheckBox fx:id="boxAdministrador" layoutX="345.0" layoutY="384.0" mnemonicParsing="false" text="Administrador">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+      <Button fx:id="btnEnviar" layoutX="371.0" layoutY="489.0" mnemonicParsing="false" text="Enviar">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVolver" layoutX="74.0" layoutY="489.0" mnemonicParsing="false" onMouseClicked="#handlebtnVolver" text="Volver">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
