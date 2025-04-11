@@ -21,6 +21,7 @@ public class ControllerLogin {
     @FXML private Button btnLogin;
     @FXML private Button btnRegistro;
     @FXML private ImageView imagenUsuario;
+    @FXML private Label etiquetaEstado;
     @FXML private Label etiquetaEmail;
     @FXML private Label etiquetaPassword;
     @FXML private Label etiquetaTitulo;
@@ -33,17 +34,15 @@ public class ControllerLogin {
     
     @FXML
     public void handlebtnLogin (MouseEvent e) throws SQLException{
-        System.out.println(campoEmail.getText());
-        System.out.println(campoPassword.getText());
         USUARIO miUsuario = baseDeDatos.buscarUsuario(campoEmail.getText(), "email");
         if(miUsuario == null){
-            System.out.println("El usuario no se encuentra en la base de datos");
+            etiquetaEstado.setText("El usuario no se encuentra en la base de datos");
         }
         else if (!miUsuario.getPassword().equals(campoPassword.getText())){
-            System.out.println("La contraseña no es correcta");
+            etiquetaEstado.setText("La contraseña no es correcta");
         }
         else{
-            System.out.println("Login realizado con exito");
+             etiquetaEstado.setText("Login realizado con exito");
         }
     }
     

@@ -36,11 +36,24 @@ public class GestorDB {
         return null;
     }
     
-    /*
+    
     public synchronized String guardarUsuario(USUARIO newUser) throws SQLException{
         Statement st = connect.createStatement();
+        if(buscarUsuario(newUser.getEmail(),"email")==null){
+            if(newUser.isTipo()){
+                st.executeUpdate("INSERT INTO USUARIO(nombre,apellido,email,password,tipo) VALUES('"+newUser.getNombre()+"','"+newUser.getApellido()+"','"+newUser.getEmail()+"','"+newUser.getPassword()+"','1')");            
+            }else{
+                st.executeUpdate("INSERT INTO USUARIO(nombre,apellido,email,password,tipo) VALUES('"+newUser.getNombre()+"','"+newUser.getApellido()+"','"+newUser.getEmail()+"','"+newUser.getPassword()+"','0')");
+            }
+            st.close();
+            return "El usuario se ha añadido correctamente";
+        }
+        else{
+            st.close();
+            return "Problemas detectados: el usuario ya existe en la base de datos";
+        }
     }
     
-    */
+    
 }
 
